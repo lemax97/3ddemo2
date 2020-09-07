@@ -13,7 +13,7 @@ public abstract class BaseScreen implements Screen, InputProcessor
 {
     protected BaseGame game;
 
-    protected Stage mainStage;
+    protected Stage3D mainStage3D;
     protected Stage uiStage;
 
     protected Table uiTable;
@@ -27,7 +27,7 @@ public abstract class BaseScreen implements Screen, InputProcessor
     {
         game = g;
 
-        mainStage = new Stage( new FitViewport(viewWidth, viewHeight) );
+        mainStage3D = new Stage3D();
         uiStage   = new Stage( new FitViewport(viewWidth, viewHeight) );
 
         uiTable = new Table();
@@ -36,7 +36,7 @@ public abstract class BaseScreen implements Screen, InputProcessor
 
         paused = false;
 
-        InputMultiplexer im = new InputMultiplexer(this, uiStage, mainStage);
+        InputMultiplexer im = new InputMultiplexer(this, uiStage);
         Gdx.input.setInputProcessor( im );
         
         create();
@@ -54,15 +54,16 @@ public abstract class BaseScreen implements Screen, InputProcessor
         // only pause gameplay events, not UI events
         if ( !isPaused() )
         {
-            mainStage.act(dt);
             update(dt);
+            mainStage3D.act(dt);
         }
 
         // render
-        Gdx.gl.glClearColor(0,0,0,1);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+        Gdx.gl.glClearColor(0.5f,0.5f,0.5f,1);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT + GL20.GL_DEPTH_BUFFER_BIT);
+        Gdx.gl.glViewport(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 
-        mainStage.draw();
+        mainStage3D.draw();
         uiStage.draw();
     }
 
@@ -79,7 +80,6 @@ public abstract class BaseScreen implements Screen, InputProcessor
     // methods required by Screen interface
     public void resize(int width, int height) 
     {    
-        mainStage.getViewport().update(width, height, true); 
         uiStage.getViewport().update(width, height, true);
     }
 

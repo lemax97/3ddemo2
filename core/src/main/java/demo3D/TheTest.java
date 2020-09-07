@@ -1,6 +1,5 @@
 package demo3D;
 
-import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -22,7 +21,7 @@ public class TheTest extends BaseGame {
 
 	@Override
 	public void create() {
-		setScreen(new GameScreen(this));
+		setScreen(new DemoScreen(this));
 		environment = new Environment();
 		environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 1f, 0f, 0.1f, 1));
 
