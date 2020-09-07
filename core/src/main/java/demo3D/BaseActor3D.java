@@ -71,6 +71,8 @@ public class BaseActor3D {
         rotation.mul(new Quaternion(Vector3.Y, -degrees));
     }
 
+    public void roll(float degrees){ rotation.mul(new Quaternion(Vector3.Z, -degrees));}
+
     public void moveForward(float dist){
         addPosition(rotation.transform(new Vector3(0, 0, -1).scl(dist)));
     }

@@ -94,6 +94,8 @@ public class Stage3D {
         camera.rotate(Vector3.Y, -angle);
     }
 
+    public void rollCamera(float angle) { camera.rotate(Vector3.Z, -angle);}
+
     public void tiltCamera(float angle){
         Vector3 right = new Vector3(camera.direction.z, 0, -camera.direction.x);
         camera.direction.rotate(right, angle);
