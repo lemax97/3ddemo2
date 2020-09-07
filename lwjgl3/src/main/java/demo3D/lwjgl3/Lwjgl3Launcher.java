@@ -2,6 +2,7 @@ package demo3D.lwjgl3;
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
+import demo3D.Demo3D;
 import demo3D.TheTest;
 
 /** Launches the desktop (LWJGL3) application. */
@@ -11,7 +12,7 @@ public class Lwjgl3Launcher {
 	}
 
 	private static Lwjgl3Application createApplication() {
-		return new Lwjgl3Application(new TheTest(), getDefaultConfiguration());
+		return new Lwjgl3Application(new Demo3D(), getDefaultConfiguration());
 	}
 
 	private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {

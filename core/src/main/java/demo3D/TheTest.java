@@ -21,7 +21,7 @@ public class TheTest extends BaseGame {
 
 	@Override
 	public void create() {
-		setScreen(new DemoScreen(this));
+		//setScreen(new DemoScreen(this));
 		environment = new Environment();
 		environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 1f, 0f, 0.1f, 1));
 
