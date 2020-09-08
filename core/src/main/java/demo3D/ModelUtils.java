@@ -57,32 +57,38 @@ public class ModelUtils
         modelBuilder.node().id = "negx";
         mpb = modelBuilder.part("negx", GL20.GL_TRIANGLES, usageCode, matSides[0] );
         mpb.setColor(Color.WHITE);
-        mpb.rect( -0.5f,-0.5f,-0.5f, -0.5f,-0.5f,+0.5f, -0.5f,+0.5f,+0.5f, -0.5f,+0.5f,-0.5f, 0,0,-1 );
+        mpb.rect( -0.5f,-0.5f,-0.5f, -0.5f,-0.5f,+0.5f,
+                -0.5f,+0.5f,+0.5f, -0.5f,+0.5f,-0.5f, 0,0,-1 );
         
         modelBuilder.node().id = "posx";
         mpb = modelBuilder.part("posx", GL20.GL_TRIANGLES, usageCode, matSides[1] );
         mpb.setColor(Color.WHITE);
-        mpb.rect( +0.5f,-0.5f,+0.5f, +0.5f,-0.5f,-0.5f, +0.5f,+0.5f,-0.5f, +0.5f,+0.5f,+0.5f,  0,0,1 );
+        mpb.rect( +0.5f,-0.5f,+0.5f, +0.5f,-0.5f,-0.5f,
+                +0.5f,+0.5f,-0.5f, +0.5f,+0.5f,+0.5f,  0,0,1 );
         
         modelBuilder.node().id = "negy";
         mpb = modelBuilder.part("negy", GL20.GL_TRIANGLES, usageCode, matSides[2] );
         mpb.setColor(Color.WHITE);
-        mpb.rect( -0.5f,-0.5f,+0.5f, -0.5f,-0.5f,-0.5f, +0.5f,-0.5f,-0.5f, +0.5f,-0.5f,+0.5f, 0,-1,0 );
+        mpb.rect( -0.5f,-0.5f,+0.5f, -0.5f,-0.5f,-0.5f,
+                +0.5f,-0.5f,-0.5f, +0.5f,-0.5f,+0.5f, 0,-1,0 );
         
         modelBuilder.node().id = "posy";
         mpb = modelBuilder.part("posy", GL20.GL_TRIANGLES, usageCode, matSides[3] );
         mpb.setColor(Color.WHITE);
-        mpb.rect( +0.5f,+0.5f,+0.5f, +0.5f,+0.5f,-0.5f, -0.5f,+0.5f,-0.5f, -0.5f,+0.5f,+0.5f, 0,1,0 );
+        mpb.rect( +0.5f,+0.5f,+0.5f, +0.5f,+0.5f,-0.5f,
+                -0.5f,+0.5f,-0.5f, -0.5f,+0.5f,+0.5f, 0,1,0 );
        
         modelBuilder.node().id = "negz";
         mpb = modelBuilder.part("negz", GL20.GL_TRIANGLES, usageCode, matSides[4] );
         mpb.setColor(Color.WHITE);
-        mpb.rect(  +0.5f,-0.5f,-0.5f, -0.5f,-0.5f,-0.5f, -0.5f,+0.5f,-0.5f, +0.5f,+0.5f,-0.5f, 0,0,-1 );
+        mpb.rect(  +0.5f,-0.5f,-0.5f, -0.5f,-0.5f,-0.5f,
+                -0.5f,+0.5f,-0.5f, +0.5f,+0.5f,-0.5f, 0,0,-1 );
         
         modelBuilder.node().id = "posz";
         mpb = modelBuilder.part("posz", GL20.GL_TRIANGLES, usageCode, matSides[5] );
         mpb.setColor(Color.WHITE);
-        mpb.rect( -0.5f,-0.5f,+0.5f, +0.5f,-0.5f,+0.5f, +0.5f,+0.5f,+0.5f, -0.5f,+0.5f,+0.5f, 0,0,1 );
+        mpb.rect( -0.5f,-0.5f,+0.5f, +0.5f,-0.5f,+0.5f,
+                +0.5f,+0.5f,+0.5f, -0.5f,+0.5f,+0.5f, 0,0,1 );
         
         Model model = modelBuilder.end();
 

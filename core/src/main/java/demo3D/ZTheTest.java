@@ -12,7 +12,7 @@ import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 import com.badlogic.gdx.math.Vector3;
 
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
-public class TheTest extends BaseGame {
+public class ZTheTest extends BaseGame {
 	public Environment environment;
 	public PerspectiveCamera perspectiveCamera;
 	public ModelBatch modelBatch;

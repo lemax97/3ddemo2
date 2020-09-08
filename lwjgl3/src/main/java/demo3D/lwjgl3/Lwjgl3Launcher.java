@@ -2,8 +2,7 @@ package demo3D.lwjgl3;
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
-import demo3D.Demo3D;
-import demo3D.TheTest;
+import demo3D.PirateCruiser;
 
 /** Launches the desktop (LWJGL3) application. */
 public class Lwjgl3Launcher {
@@ -12,7 +11,7 @@ public class Lwjgl3Launcher {
 	}
 
 	private static Lwjgl3Application createApplication() {
-		return new Lwjgl3Application(new Demo3D(), getDefaultConfiguration());
+		return new Lwjgl3Application(new PirateCruiser(), getDefaultConfiguration());
 	}
 
 	private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {

@@ -7,10 +7,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.Texture.TextureFilter;
 import com.badlogic.gdx.graphics.g3d.ModelInstance;
 
-public class DemoScreen extends BaseScreen {
+public class ZDemoScreenBox extends BaseScreen {
     BaseActor3D player;
 
-    public DemoScreen(BaseGame g) {
+    public ZDemoScreenBox(BaseGame g) {
         super(g);
     }
 
@@ -47,6 +47,8 @@ public class DemoScreen extends BaseScreen {
         markerZ.setPosition(0, 0, 5);
         mainStage3D.addActor(markerZ);
 
+
+
         player = new BaseActor3D();
         Texture[] texSides = {
                 new Texture(Gdx.files.internal("xneg.png")),
@@ -55,6 +57,10 @@ public class DemoScreen extends BaseScreen {
                 new Texture(Gdx.files.internal("ypos.png")),
                 new Texture(Gdx.files.internal("zneg.png")),
                 new Texture(Gdx.files.internal("zpos.png"))};
+
+        // alternatively to using the createCubeTexture6 method,
+        // you can use crate a model instance for the player object using the code:
+        // ModelInstance testModel = ModelUtils.createBox(1, 1, 1, textureCrate, Color.YELLOW);
 
         ModelInstance testModel = ModelUtils.createCubeTexture6(texSides);
         player.setModelInstance(testModel);
@@ -122,7 +128,7 @@ public class DemoScreen extends BaseScreen {
     public boolean keyDown(int keycode)
     {
         if (keycode == Keys.Z)
-            game.setScreen( new DemoScreen(game) );
+            game.setScreen( new ZDemoScreenBox(game) );
 
         return false;
     }
